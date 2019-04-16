@@ -121,8 +121,7 @@ function setup()
 
    // Template system setup
    swig.setDefaults({
-     root: __dirname + "/app/views",
-	 autoescape: true
+	 autoescape: false
     });
 
    var server = app.listen(8080);

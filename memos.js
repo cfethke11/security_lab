@@ -21,6 +21,8 @@ function addMemos(req,res,next)
 {
    var memo = req.body.memo;
 
+   memo.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
+
    var q = "INSERT INTO Memos(memo) VALUES ( '" + memo + "' )";
    db.query(q,function(e1,d1) { addMemos1(req,res,next,e1,d1); });
 }
