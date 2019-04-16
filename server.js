@@ -121,6 +121,7 @@ function setup()
 
    // Template system setup
    swig.setDefaults({
+     root: __dirname + "/app/views",
 	 autoescape: true
     });
 
