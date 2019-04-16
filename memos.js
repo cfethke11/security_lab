@@ -55,9 +55,9 @@ function displayMemos(req,res,next)
 function displayMemos1(req,res,next,err,data)
 {
     if (err) next(err);
-    
+
     var doc = { memosList: data.rows, userId : req.session.userId };
-    
+
     return res.render("memos",doc);
 }
 
